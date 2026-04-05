@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Q&A - FAQ</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <strong>Q&A Portal</strong>
+      </div>
+      <div class="nav-links">
+        <a href="c-sharp.html">C#</a>
+        <a href="js.html">JS</a>
+        <a href="sql.html">SQL</a>
+        <a href="dot-net.html">.NET</a>
+        <a href="react.html">React</a>
+      </div>
+      <button
+        class="theme-toggle"
+        onclick="toggleDarkMode()"
+        title="Toggle Dark Mode"
+      >
+        🌙
+      </button>
+    </nav>
+
+    <div class="container">
+      <h1>React Interview Question</h1>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">1.</span>
+          What is React and why is it used? How does it differ from Angular?
+        </div>
+        <div class="answer">
+          React is a JavaScript library for building fast, interactive UIs. Its
+          focus is on the "View" layer. While Angular is a full-fledged
+          framework.
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()" id="backToTop">↑</div>
+  </body>
+</html>

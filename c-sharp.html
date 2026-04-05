@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Q&A - FAQ</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <strong>Q&A Portal</strong>
+      </div>
+      <div class="nav-links">
+        <a href="c-sharp.html">C#</a>
+        <a href="js.html">JS</a>
+        <a href="sql.html">SQL</a>
+        <a href="dot-net.html">.NET</a>
+        <a href="react.html">React</a>
+      </div>
+      <button
+        class="theme-toggle"
+        onclick="toggleDarkMode()"
+        title="Toggle Dark Mode"
+      >
+        🌙
+      </button>
+    </nav>
+
+    <div class="container">
+      <h1>C# Interview Question</h1>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">1.</span>
+          Does C# support multiple inheritance? How you can implement multiple
+          inheritance in C#?
+        </div>
+        <div class="answer">
+          No. However, multiple inheritance can be achieved by using interfaces.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">2.</span>
+          What is Abstraction? How to implement abstraction in a real
+          application?
+        </div>
+        <div class="answer">
+          Abstraction means hiding internal implementation details and exposing
+          only the necessary functionality to the user or developer. <br />
+          For example, when we use the Trim() method in C#, we don't need to
+          know how it actually removes whitespace behind the scenes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">3.</span>
+          What is Polymorphism and what are its types? When to use polymorphism?
+        </div>
+        <div class="answer">
+          Polymorphism allows a single method, class, or interface to behave
+          differently based on the context. <br />
+          We use it when we want to write generic code that works with different
+          object types. There are 2 types of Polymorphism.<br />
+          🔹 Compile-time Polymorphism. Method Overloading.<br />
+          🔹 Run-time Polymorphism. Method Overriding.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">4.</span>
+          What is Boxing and Unboxing?
+        </div>
+        <div class="answer">
+          Boxing is the process of converting from value type to reference
+          type.<br />
+          Unboxing is the process of converting from reference type to value
+          type.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">5.</span>
+          When to use Interface and when Abstract class in real application?
+        </div>
+        <div class="answer">
+          🔹 We use an interface when we want to enforce declaration but we
+          usually don't know the exact implementation. And also when we want to
+          support multiple inheritance.<br />
+          🔹 We use an abstract class when we want to define a base class with
+          common/shared functionality. Or want to provide default implementation
+          for some methods.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">6.</span>
+          What is the difference between continue and break statement?
+        </div>
+        <div class="answer">
+          Continue statement, skips current iteration and moves to the next
+          one.<br />
+          Break statement, end the loop iteration and exit the loop.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">7.</span>
+          What is the difference between finally and finalize?
+        </div>
+        <div class="answer">
+          🔹 Finally, it is used in exception handling.<br />
+          🔹 Finalize is a method which is automatically called by the garbage
+          collector to dispose of objects.
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()" id="backToTop">↑</div>
+  </body>
+</html>
