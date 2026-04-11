@@ -32,6 +32,8 @@
     <div class="container">
       <h1>React Interview Question</h1>
 
+      <h2 style="text-align: center">Beginner (Fundamentals)</h2>
+
       <div class="faq-item">
         <div class="question" onclick="toggleAnswer(this)">
           <span class="question-number">1.</span>
@@ -41,6 +43,511 @@
           React is a JavaScript library for building fast, interactive UIs. Its
           focus is on the "View" layer. While Angular is a full-fledged
           framework.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">2.</span>
+          What is JSX? Why is it used instead of plain JavaScript?
+        </div>
+        <div class="answer">
+          It allows you to write HTML-like structures in JS. It is more
+          readable.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">3.</span>
+          What is the Virtual DOM and how does it work?
+        </div>
+        <div class="answer">
+          A lightweight, in-memory representation of the Real DOM. React uses it
+          to batch updates and minimize expensive direct DOM manipulation. React
+          updates the Virtual DOM first, compares it with a previous snapshot (a
+          process called "diffing"), and then efficiently updates only the
+          necessary parts in the real DOM.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">4.</span>
+          What is the difference between functional and class components?
+        </div>
+        <div class="answer">
+          Functional components are simple JavaScript functions that accept
+          props and return JSX. Class components are ES6 classes with more
+          boilerplate, using this.state and lifecycle methods (now mostly
+          legacy).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">5.</span>
+          What are Props?
+        </div>
+        <div class="answer">
+          Short for "properties." They are read-only inputs passed from a parent
+          to a child component to make components reusable.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">6.</span>
+          What is the State?
+        </div>
+        <div class="answer">
+          An internal object that holds data which may change over time. When
+          the state changes, the component re-renders.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">7.</span>
+          Difference between Props and State?
+        </div>
+        <div class="answer">
+          Props are external (passed in) and immutable; State is internal
+          (managed within) and mutable via setState or useState.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">8.</span>
+          What is the purpose of keys in React lists?
+        </div>
+        <div class="answer">
+          Unique identifiers that help React track which items in a list have
+          changed, been added, or removed for efficient rendering.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">9.</span>
+          What is "Lifting State Up"?
+        </div>
+        <div class="answer">
+          Moving shared state to the closest common parent of components that
+          need to access or modify that data.
+        </div>
+      </div>
+
+      <h2 style="text-align: center">Intermediate (Hooks & Component)</h2>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">10.</span>
+          What are React Hooks, and what are the Rules of Hooks?
+        </div>
+        <div class="answer">
+          Hooks are functions that let you "hook into" React state and lifecycle
+          features from functional components. It must be called at the top
+          level (not inside loops/conditions) and only from React functional
+          components or custom hooks.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">11.</span>
+          What is the useState Hook?
+        </div>
+        <div class="answer">
+          useState is a Hook that lets you add React state to functional
+          components. It returns an array with two elements: the current state
+          value and a function to update it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">12.</span>
+          question
+        </div>
+        <div class="answer">answer</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">13.</span>
+          What is the useEffect Hook and how does it work?
+        </div>
+        <div class="answer">
+          useEffect lets you perform side effects in functional components, such
+          as data fetching, setting up a subscription, or manually changing the
+          DOM. It replaces lifecycle methods like componentDidMount,
+          componentDidUpdate, and componentWillUnmount.<br />
+          Used for side effects (API calls, subscriptions, DOM updates). Mention
+          the dependency array: [] (mount only), [val] (on change), or no array
+          (every render).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">14.</span>
+          What is the difference between useEffect and useLayoutEffect?
+        </div>
+        <div class="answer">
+          useLayoutEffect and useEffect. useLayoutEffect runs synchronously
+          after DOM mutations but before the browser paints; useEffect runs
+          asynchronously after the paint.<br />
+          useLayoutEffect fires synchronously after all DOM mutations but before
+          the browser has a chance to paint. It's useful for reading layout from
+          the DOM and synchronously re-rendering, but it blocks visual updates.
+          useEffect runs after paint and is preferred for most side effects to
+          avoid blocking.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">15.</span>
+          How does React handle re-rendering?
+        </div>
+        <div class="answer">
+          React handles re-rendering through a three-step cycle designed to keep
+          the user interface in sync with the application state: Trigger,
+          Render, and Commit.<br />
+          <b>1. The Trigger Phase</b><br />
+          A re-render is always initiated by a change in data.<br />
+          <b>2. The Render Phase</b><br />
+          In this phase, React calls your component functions to determine what
+          the UI should look like.<br />
+          <b>3. The Commit Phase</b><br />
+          After calculating the differences, React applies them to the real DOM.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">16.</span>
+          What is useMemo vs. useCallback?
+        </div>
+        <div class="answer">
+          useMemo memoizes a value (result of a calculation); useCallback
+          memoizes a function definition to prevent unnecessary child
+          re-renders.<br />
+          useMemo returns a memoized value. It only recomputes the value when
+          its dependencies change, helping to optimize expensive calculations
+          and avoid them on every render.<br />
+          useCallback returns a memoized version of a callback function that
+          only changes if one of its dependencies has changed. This is useful to
+          prevent unnecessary re-renders of child components that rely on
+          reference equality to skip updates.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">17.</span>
+          How do you handle forms in React? What are controlled vs uncontrolled
+          components?
+        </div>
+        <div class="answer">
+          Handling forms in React involves managing input data and submission
+          events. There are two primary architectural patterns: Controlled and
+          Uncontrolled components.<br />
+          In a controlled component, form data is handled by React state. In an
+          uncontrolled component, form data is handled by the DOM itself, and
+          you use a ref to access the values.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">18.</span>
+          What is conditional rendering?
+        </div>
+        <div class="answer">
+          Conditional rendering works the same way conditions work in
+          JavaScript. You can use if statements, the ternary operator (? :), or
+          the logical AND operator (&&) to render different UI elements based on
+          specific conditions.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">19.</span>
+          What are fragments in React?
+        </div>
+        <div class="answer">
+          A wrapper that lets you group multiple elements without adding an
+          extra node to the HTML DOM. This is useful to avoid unnecessary
+          wrapper like "div".
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">20.</span>
+          What is Context API and when would you use it?
+        </div>
+        <div class="answer">
+          A way to share global data (like themes or auth) without "prop
+          drilling" through every level of the tree.<br />
+          The Context API provides a way to share values like the authenticated
+          user, theme, or preferred language across the entire component tree
+          without having to pass props down manually at every level.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">21.</span>
+          What is useRef?
+        </div>
+        <div class="answer">
+          useRef returns a mutable ref object whose .current property persists
+          for the full lifetime of the component without causing re-renders.<br />
+          useRef returns a mutable ref object whose .current property is
+          initialized to the passed argument. It's commonly used to access DOM
+          elements directly or to persist values across renders without causing
+          a re-renders.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">22.</span>
+          What is the useReducer Hook, and how is it different from useState?
+        </div>
+        <div class="answer">
+          An alternative to useState for complex state logic, often used when
+          the next state depends on the previous one (similar to Redux logic).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">23.</span>
+          What is the "Prop Drilling" problem?
+        </div>
+        <div class="answer">
+          Props drilling occurs when you need to pass data through multiple
+          intermediate components just to get it to a deeply nested child
+          component. You can avoid it by using the Context API or a state
+          management library like Redux.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">24.</span>
+          How does the React.memo function work?
+        </div>
+        <div class="answer">
+          A higher-order component that prevents a functional component from
+          re-rendering if its props haven't changed.
+        </div>
+      </div>
+
+      <h2 style="text-align: center">Advanced (Architecture & Performance)</h2>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">25.</span>
+          What are Higher-Order Components (HOC)?
+        </div>
+        <div class="answer">
+          A Higher-Order Component is a pattern where a function takes a
+          component and returns a new component with additional props or
+          functionality. It's an advanced technique for reusing component logic.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">26.</span>
+          What is Redux and how is it different from Context API for state
+          management?
+        </div>
+        <div class="answer">
+          While Context API is great for prop drilling and simple global state,
+          Redux is better for complex applications requiring a single source of
+          truth, predictable state updates with reducers, powerful middleware
+          for async logic, and time-travel debugging.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">27.</span>
+          What is reconciliation in React?
+        </div>
+        <div class="answer">
+          The algorithm React uses to "diff" the Virtual DOM trees and determine
+          which parts of the Real DOM need updating.<br />
+          Reconciliation is the process React uses to update the DOM. When a
+          component's props or state change, React builds a new virtual DOM tree
+          and compares it to the previous one (a process called "diffing"). It
+          then calculates the most efficient way to update the real DOM with
+          these changes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">28.</span>
+          What are custom hooks?
+        </div>
+        <div class="answer">
+          Functions starting with "use" that allow you to extract and reuse
+          component logic (e.g., useFetch, useLocalStorage).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">29.</span>
+          What is lazy loading, Suspense and code splitting in React?
+        </div>
+        <div class="answer">
+          Breaking a large bundle into smaller chunks using React.lazy and
+          Suspense so users only load the code they need.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">30.</span>
+          How does React Router work?
+        </div>
+        <div class="answer">
+          React Router is a library that enables client-side routing in React
+          applications, allowing them to function as Single-Page Applications
+          (SPAs). It simulates a multi-page experience by updating the URL and
+          UI dynamically without a full page reload from the server.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">31.</span>
+          What are Error Boundaries?
+        </div>
+        <div class="answer">
+          Error Boundaries special class components that catch JS errors in
+          their child tree and display a fallback UI.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">32.</span>
+          What is Concurrent Mode?
+        </div>
+        <div class="answer">
+          A set of features (like useTransition and useDeferredValue) that allow
+          React to stay responsive by interrupting long-running renders.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">33.</span>
+          What are React Server Components (RSC)?
+        </div>
+        <div class="answer">
+          Components that execute on the server, sending zero JavaScript to the
+          client, which significantly improves load times.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">34.</span>
+          What is Hydration?
+        </div>
+        <div class="answer">
+          The process where React attaches event listeners to static HTML sent
+          by the server (SSR), making the page interactive.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">35.</span>
+          Difference between SSR and CSR?
+        </div>
+        <div class="answer">
+          Server-Side Rendering (SSR) generates HTML on the server (better
+          SEO/First Paint); Client-Side Rendering (CSR) builds the UI in the
+          browser.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">36.</span>
+          How would you optimize a list with 10,000 items?
+        </div>
+        <div class="answer">
+          Use Windowing or Virtualization (e.g., react-window) to only render
+          the items currently visible in the viewport.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">37.</span>
+          How would you design a custom useDebounce Hook?
+        </div>
+        <div class="answer">
+          A useDebounce Hook would delay updating a value until after a
+          specified delay, reducing the number of renders from rapidly firing
+          events like keystrokes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">38.</span>
+          Explain useTransition and useDeferredValue. How do they improve user
+          experience?
+        </div>
+        <div class="answer">
+          These are React 18 Hooks for concurrent rendering.<br />
+          useTransition allows you to mark a state update as non-urgent, keeping
+          the UI responsive during heavy renders.<br />
+          useDeferredValue lets you defer updating a less important part of the
+          UI, similar to debouncing but built-in.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">39.</span>
+          Explain how React's automatic batching works?
+        </div>
+        <div class="answer">
+          Batching is when React groups multiple state updates into a single
+          re-render for better performance. In React 18, automatic batching is
+          enabled for all updates, including those inside promises, timeouts,
+          and event handlers, ensuring efficient rendering.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">40.</span>
+          What are the performance implications of using an anonymous function
+          as a prop ( e.g., onClick={() => doSomething()} )?
+        </div>
+        <div class="answer">
+          This creates a new function on every render. If this prop is passed to
+          a memoized child component (React.memo), the child will see a new
+          function reference each time and re-render unnecessarily, defeating
+          the purpose of memoization. Using useCallback solves this by
+          maintaining a stable reference.
         </div>
       </div>
     </div>
