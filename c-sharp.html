@@ -123,6 +123,435 @@
           collector to dispose of objects.
         </div>
       </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">8.</span>
+          What is Garbage Collector (GC)?
+        </div>
+        <div class="answer">
+          The Garbage Collector manages the allocation and release of memory in
+          .NET Framework.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">9.</span>
+          What are the types of classes in C#?
+        </div>
+        <div class="answer">
+          🔹 Abstract Class<br />
+          🔹 Static Class<br />
+          🔹 Sealed Class<br />
+          🔹 Partial Class
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">10.</span>
+          How to prevent a class from being inherited?
+        </div>
+        <div class="answer">By using the sealed keyword in class.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">11.</span>
+          What is encapsulation?
+        </div>
+        <div class="answer">
+          Encapsulation is the concept of wrapping data and methods into a
+          single unit, and restricting direct access of an object's components.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">12.</span>
+          What is the difference between Abstraction and Encapsulation?
+        </div>
+        <div class="answer">
+          🔹 Abstraction means hiding implementation details, showing only
+          essentials.<br />
+          Goal: Hide complexity<br />
+          🔹 Encapsulation is hiding data (state) and restricting direct
+          access.<br />
+          Goal: Protect internal state and ensure safe access
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">13.</span>
+          What is the difference between Method Overriding and Method Hiding?
+        </div>
+        <div class="answer">
+          🔹 Method Overriding – True Polymorphism<br />
+          You override a method to customize or extend base class behavior.<br />
+          🔹 Method Hiding – Replaces Method Using "new"<br />
+          If you define a method with the same name in the derived class without
+          override, you’re hiding the base method, not overriding it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">14.</span>
+          What is the difference between Abstract class and Interface?
+        </div>
+        <div class="answer">
+          🔹 Abstract - If you need Shared implementation or Fields,
+          constructor, protected members<br />
+          🔹 Interface - If you need Only behavior definition or Multiple
+          inheritance
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">15.</span>
+          Can you create an instance of an Abstract class or an Interface?
+        </div>
+        <div class="answer">
+          No. They act as base class via inheritance. Their object creation is
+          not possible.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">16.</span>
+          What is the difference between "throw ex" and "throw"?
+        </div>
+        <div class="answer">
+          "throw ex" will change the stack trace, whereas "throw" will preserve
+          the whole stack trace.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">17.</span>
+          Explain Generics in C#? When and why to use them in real applications?
+        </div>
+        <div class="answer">
+          Generics in C# allow you to write reusable, and type-safe code. They
+          eliminate the need for casting and reduce duplication by letting you
+          work with any data type using a single class or method.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">18.</span>
+          What is the difference between IEnumerable and IQueryable in C#? Why
+          to use IQueryable for SQL queries?
+        </div>
+        <div class="answer">
+          IEnumerable is great for in-memory collections, while IQueryable is
+          designed for remote data sources like databases.<br />
+          Use IQueryable when working with Entity Framework or LINQ-to-SQL to
+          let the database do the heavy lifting — filtering, joining, sorting —
+          before data comes to your app.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">19.</span>
+          What are Extension Methods in C#? When to use extension methods in
+          real applications?
+        </div>
+        <div class="answer">
+          Extension methods allow you to "add" new methods to existing types
+          without modifying the original class or creating a derived class.<br />
+          They're static methods that enhance readability, reuse, and
+          organization — and are used heavily in LINQ, utility libraries, and
+          clean code patterns.<br />
+          It looks like you're calling a method on the object itself — but it's
+          really a static method under the hood.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">20.</span>
+          What is "this" keyword in C#? When to use it in a real application?
+        </div>
+        <div class="answer">
+          this keyword refers to the current instance of the class — the object
+          whose method or property is being executed.<br />
+          It is used to resolve naming conflicts, support method chaining, pass
+          the current object, and is required in extension methods.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">21.</span>
+          What is the difference between Arraylist and Hashtable?
+        </div>
+        <div class="answer">
+          ArrayList is a dynamic list that stores items by index, while
+          Hashtable stores items by key-value pairs.<br />
+          Use ArrayList when you just need a resizable list, and Hashtable when
+          you need to quickly look up values by key.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">22.</span>
+          What are Delegates in C#?
+        </div>
+        <div class="answer">
+          Delegates allows methods to be passed as parameters or assigned to a
+          variable. It can refer to more than one method of the same return type
+          and parameters.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">23.</span>
+          What is Static class? When to use static class in real application?
+        </div>
+        <div class="answer">
+          A static class is a class whose object cannot be created, and which
+          cannot be inherited and can only contain static members (fields,
+          properties, methods, events).<br />
+          Utility or helper methods.<br />
+          Global configuration.<br />
+          Extension methods.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">24.</span>
+          What is GAC?
+        </div>
+        <div class="answer">
+          GAC stands for Global Assembly Cache.<br />
+          - GAC is the place where public assemblies are stored.<br />
+          - Private assembly can be converted into public assembly by adding
+          them in GAC using gacutil tool.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">25.</span>
+          What are Generations in garbage collection?
+        </div>
+        <div class="answer">
+          In C#, the garbage collector (GC) uses generations to optimize memory
+          cleanup:<br />
+          * Generation 0 → Newly allocated short-lived objects.<br />
+          * Generation 1 → Objects that survived one GC cycle. Acts as a buffer
+          between short-lived and long-lived objects.<br />
+          * Generation 2 → Long-lived objects that survived multiple
+          collections. Collected least frequently.<br />
+          💡 Idea: Most objects die young, so GC focuses more on Gen 0 and less
+          on Gen 2 to improve performance.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">26.</span>
+          What is the difference between Threads and Tasks? What are the
+          advantages of Tasks over Threads?
+        </div>
+        <div class="answer">
+          In .NET, threads and tasks are two different ways of doing
+          multithreading.<br />
+          Thread is a general programming concept. On the other hand, Microsoft
+          created Task in .NET to simplify the use of Threads.<br />
+          Tasks are like wrapper over Threads.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">27.</span>
+          What is Dependency Injection?
+        </div>
+        <div class="answer">
+          Dependency Injection (DI) is a software design pattern where an object
+          (class) gets the objects it depends on (its dependencies) from an
+          external source.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">28.</span>
+          When to use String and when to use StringBuilder?
+        </div>
+        <div class="answer">
+          If you want to change a string multiple times then StringBuilder is a
+          better option from performance point of view because it will not
+          require new memory every time.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">29.</span>
+          Can we have only try block without catch block?
+        </div>
+        <div class="answer">
+          Yes, in C# you can have a try block without a catch block — but only
+          if you also have a finally block.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">30.</span>
+          What is Authentication and Authorization in ASP .NET MVC?
+        </div>
+        <div class="answer">
+          🔹 Authentication<br />
+          What it is → Verifies who the user is.<br />
+          Purpose → Ensure the user is genuine.<br />
+          🔹 Authorization<br />
+          What it is → Decides what the user can do.<br />
+          Purpose → Control access to resources.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">31.</span>
+          What are the types of Authentication in ASP .NET MVC?
+        </div>
+        <div class="answer">
+          Form Authentication, Passport Authentication, Token Authentication
+          (JWT), and Windows Authentication.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">32.</span>
+          What is JWT Authentication?
+        </div>
+        <div class="answer">
+          JWT is a secure way to send information between client and server as a
+          JSON object, and it's digitally signed so the data can't be tampered
+          with.<br />
+          JWT has 3 parts (Base64 encoded, separated by dots):
+          Header.Payload.Signature
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">33.</span>
+          What is AddSingleton, AddScoped and AddTransient method?
+        </div>
+        <div class="answer">
+          🔹 AddSingleton<br />
+          Lifetime: Only one instance is created and shared throughout the
+          application.<br />
+          When to use: For stateless services or configurations that are safe to
+          share.<br />
+          Example:<br />
+          Logger service<br />
+          App settings<br />
+          🔹 AddScoped<br />
+          Lifetime: One instance is created per HTTP request (shared within the
+          same request, but different for each request).<br />
+          When to use: For services that store data per request, e.g.,
+          repositories.<br />
+          Example:<br />
+          Database context (EF Core DbContext)<br />
+          🔹 AddTransient<br />
+          Lifetime: A new instance is created every time the service is
+          requested.<br />
+          When to use: For lightweight, stateless services where you always want
+          a fresh object.<br />
+          Example:<br />
+          Helper classes<br />
+          Data transformers
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">34.</span>
+          What is the Singleton design pattern?
+        </div>
+        <div class="answer">
+          The Singleton ensures that a class has only one instance throughout
+          the application and provides a global access point to that instance.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">35.</span>
+          What is the Factory pattern?
+        </div>
+        <div class="answer">
+          The Factory Pattern centralizes object creation logic. It provides an
+          interface or abstract class for creating objects, but lets the
+          subclasses decide which class to instantiate.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">36.</span>
+          How many types of dependency injection?
+        </div>
+        <div class="answer">
+          There are three primary types of dependency injection.<br />
+          🔹 Constructor Injection<br />
+          This is the most common and highly recommended type. Dependencies are
+          provided to a class through its constructor.<br />
+          🔹 Setter Injection (Property Injection)<br />
+          Dependencies are provided through public setter properties or methods
+          after the object has been instantiated.<br />
+          🔹 Interface Injection<br />
+          This is a more complex and rare form where the dependency provides an
+          interface through which it can inject itself into a client. The client
+          implements an interface that contains a method for injecting the
+          dependency.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">37.</span>
+          What is the include keyword in LINQ queries?
+        </div>
+        <div class="answer">
+          The Include keyword in LINQ (specifically with Entity Framework) is
+          used for eager loading. It tells the ORM to retrieve related entities
+          along with the main entity in a single database query, preventing the
+          need for additional lazy-loaded queries later.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">38.</span>
+          What is Lazy loading, Eager loading?
+        </div>
+        <div class="answer">
+          🔹 Lazy Loading<br />
+          Related data is loaded automatically and on-demand (i.e., "lazily")
+          when you first access a navigation property.<br />
+          🔹 Eager Loading<br />
+          Related data is loaded immediately and upfront (i.e., "eagerly") in a
+          single query along with the main entities.
+        </div>
+      </div>
     </div>
 
     <!-- Back to Top Button -->
