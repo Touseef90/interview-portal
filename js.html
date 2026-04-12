@@ -32,14 +32,387 @@
     <div class="container">
       <h1>Javascript Interview Question</h1>
 
+      <h2 style="text-align: center">Beginner (Fundamentals)</h2>
+
       <div class="faq-item">
         <div class="question" onclick="toggleAnswer(this)">
           <span class="question-number">1.</span>
-          What is Javascript?
+          What is JavaScript?
         </div>
         <div class="answer">
           It is a programming language that is used for converting static web
           pages to <b>interactive and dynamic</b> web pages.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">2.</span>
+          What are data types in JavaScript? What are primitive data types?
+        </div>
+        <div class="answer">
+          A data type determines the type of values that can be stored in a
+          variable.<br />
+          Primitive data types are immutable, which means that their values
+          cannot be changed or modified once they are created. They can hold
+          only single value.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">3.</span>
+          What is the difference between primitive and non-primitive data types?
+        </div>
+        <div class="answer">
+          <ol>
+            <li>
+              Primitive data types are Number, string, Boolean, undefined, null.
+              Non-primitive are Object, array, function, date, RegExp.
+            </li>
+            <li>
+              Primitive data types can hold only single value. Non-primitive can
+              hold multiple values and methods.
+            </li>
+            <li>
+              Primitive data types are immutable. Non-primitive are mutable.
+            </li>
+            <li>Primitive data types are simple. Non-primitive are complex.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">4.</span>
+          What are arrays, functions and objects?
+        </div>
+        <div class="answer">
+          <ul>
+            <li>
+              An array is used to store a collection of values, such as a list
+              of numbers or a list of names.
+            </li>
+            <li>
+              A function is a block of code that performs a specific task or
+              return a value.
+            </li>
+            <li>
+              An object can hold multiple values or a combination of values and
+              functions.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">5.</span>
+          What is scope in JavaScript?
+        </div>
+        <div class="answer">
+          LOCAL SCOPE: Variable declare inside a function have a local scope,
+          which means they can only be accessed within the function not outside.
+          <br />
+          GLOBAL SCOPE: Variable declared outside any function have global
+          scope, which means they can be accessed from anywhere in a program.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">6.</span>
+          What is the difference between var, let, and const in JavaScript?
+        </div>
+        <div class="answer">
+          <ul>
+            <li>"var" creates a function scoped variable.</li>
+            <li>"let" creates a block scoped variable.</li>
+            <li>
+              "const" can be assigned only once, and its value cannot be changed
+              afterwards.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">7.</span>
+          What is loop? What are the types of loops in JavaScript?
+        </div>
+        <div class="answer">
+          A loop is a programming way to run a set of instructions (code)
+          repeatedly until a certain condition is met.
+          <ol>
+            <li>for</li>
+            <li>while</li>
+            <li>foreach</li>
+            <li>do-while</li>
+            <li>for..of</li>
+            <li>for..in</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">8.</span>
+          What is the difference between for, while, and do-while loops?
+        </div>
+        <div class="answer">
+          <ul>
+            <li>
+              For loop allows to iterate a block of code a specific number of
+              times.
+            </li>
+            <li>
+              While loop iterate a block of code while a certain condition is
+              true.
+            </li>
+            <li>
+              Do-while loop is similar to the while loop, except that the block
+              of code is executed at least once, even if the condition is false.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">9.</span>
+          What is difference between for..of and for..in loop?
+        </div>
+        <div class="answer">
+          for...of loop is used to loop through the values of an object like
+          arrays, strings.<br />
+          for...in loop is used to loop through the properties of an object.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">10.</span>
+          What is forEach method? Compare it with for...of and for...in loop?
+        </div>
+        <div class="answer">
+          forEach is a method available on arrays or object that allows you to
+          iterate over each element of the array and perform some action on each
+          element.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">11.</span>
+          What is the difference between == and === in JavaScript?
+        </div>
+        <div class="answer">
+          == operator performs type coercion and converts the string to the
+          number and then compare.<br />
+          === operator does not performs type coercion and only set to true if
+          value and type both are same.
+        </div>
+      </div>
+
+      <h2 style="text-align: center">Intermediate (Functions)</h2>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">12.</span>
+          What are the types of functions in JavaScript? What are named and
+          anonymus functions?
+        </div>
+        <div class="answer">
+          There are 7 types of function in JavaScript.
+          <ol>
+            <li>Named Function</li>
+            <li>Anonymous Function</li>
+            <li>Function Expression</li>
+            <li>Arrow Function</li>
+            <li>IIFE</li>
+            <li>Callback Function</li>
+            <li>Higher-Order Function</li>
+          </ol>
+          The primary distinction between named and anonymous functions is
+          whether the function has an identifier (a name) attached to its
+          definition.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">13.</span>
+          What is function expression in JavaScript?
+        </div>
+        <div class="answer">
+          A function expression is a way to define a function in JavaScript by
+          assigning it to a variable.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">14.</span>
+          What are Arrow Functions in JavaScript?
+        </div>
+        <div class="answer">
+          Arrow functions, are a concise syntax for defining functions in
+          JavaScript.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">15.</span>
+          What are Callback Functions?
+        </div>
+        <div class="answer">
+          A callback function is a function that is passed as an argument to
+          another function.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">16.</span>
+          When to use Callback Functions in real applications?
+        </div>
+        <div class="answer">
+          Callback function use:
+          <ul>
+            <li>Iteration</li>
+            <li>Event handling</li>
+            <li>Asynchronous operations</li>
+            <li>Higher-Order functions</li>
+            <li>Promises</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">17.</span>
+          What is the use of event handling in JavaScript?
+        </div>
+        <div class="answer">
+          Event handling is the process of responding to user actions in a web
+          page.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">18.</span>
+          What is higher-order function?
+        </div>
+        <div class="answer">
+          We call if a higher-order function if:
+          <ol>
+            <li>
+              Take one or more functions as arguments (callback function) OR
+            </li>
+            <li>Return a function as a result</li>
+          </ol>
+        </div>
+      </div>
+
+      <h2 style="text-align: center">Advanced (Asnyc, Promise, & OOP)</h2>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">19.</span>
+          What are asynchronous operations in JavaScript?
+        </div>
+        <div class="answer">
+          They are the operations that do not block the execution of the code.
+          <br />
+          User of asynchronous operations.
+          <ol>
+            <li>setTimeout</li>
+            <li>Promises</li>
+            <li>Loading Data from API</li>
+            <li>Uploading Files</li>
+            <li>Animations and Transitions</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">20.</span>
+          What are promises in JavaScript?
+        </div>
+        <div class="answer">
+          <ul>
+            <li>Promises are a way to handle asynchronous operations.</li>
+            <li>
+              It represents a value that may not be available yet but will be in
+              future.
+            </li>
+            <li>
+              It can be in one of 3 states: pending, resolved, or rejected.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">21.</span>
+          How to implement promises in JavaScript?
+        </div>
+        <div class="answer">
+          const myPromise = new Promise((resolve, reject) => { setTimeout(() =>
+          { const r = Math.floor(Math.random() * 10); if(r == 5) {
+          resolve('Success!') } else { reject('Failed!') } }) }, 1000);
+          myPromise.then((result) => { console.log(result); }).catch((err) => {
+          console.log(err); });
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">22.</span>
+          When to use Promises in real applications?
+        </div>
+        <div class="answer">
+          They are useful in doing asynchronous operation and handle the results
+          whent the result wil be available in future.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">23.</span>
+          What are classes and objects in JavaScript?
+        </div>
+        <div class="answer">
+          Class is a template for creating objects with similar properties and
+          methods.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">24.</span>
+          What is the purpose of "this" in JavaScript?
+        </div>
+        <div class="answer">
+          "this" refers to the current context or scope in which code is being
+          executed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">25.</span>
+          What is hoisting in JavaScript?
+        </div>
+        <div class="answer">
+          Hoisting is a JavaScript behaviour where function and variable
+          declarations are moved to the top of their respective scopes during
+          the compilation phase.
         </div>
       </div>
     </div>
