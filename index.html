@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Q&A - FAQ</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <strong>Q&A Portal</strong>
+      </div>
+      <div class="nav-links">
+        <a href="c-sharp.html">C#</a>
+        <a href="js.html">JS</a>
+        <a href="sql.html">SQL</a>
+        <a href="dot-net.html">.NET</a>
+        <a href="react.html">React</a>
+      </div>
+      <button
+        class="theme-toggle"
+        onclick="toggleDarkMode()"
+        title="Toggle Dark Mode"
+      >
+        🌙
+      </button>
+    </nav>
+
+    <div class="container">
+      <h1>Interview Question</h1>
+      <p style="text-align: center; margin: 20px 0">
+        This site will help you getting prepared for most frequently asked
+        Interview Questions.
+      </p>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()" id="backToTop">↑</div>
+  </body>
+</html>
