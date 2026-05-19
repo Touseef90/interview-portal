@@ -50,6 +50,40 @@
           </ul>
         </div>
       </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">2.</span>
+          What is a Constraint in SQL? What are its type?
+        </div>
+        <div class="answer">
+          SQL constraints are used to specify rules for the data in a table.
+          Constraints are used to limit the type of data that can go into a
+          table. For example:
+          <b>PRIMARY KEY, NOT NULL, FOREIGN KEY, CHECK, DEFAULT, UNIQUE</b> etc.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">3.</span>
+          What is a difference between Primary key and Unique key?
+        </div>
+        <div class="answer">
+          Primary Key:
+          <ul>
+            <li>Primary Key can't accept NULL value.</li>
+            <li>Creates clustered index.</li>
+            <li>Only one Primary key in a Table.</li>
+          </ul>
+          Unique Key:
+          <ul>
+            <li>Unique Key can accept only one NULL value.</li>
+            <li>Creates non-clustered index.</li>
+            <li>More than one Unique key in a Table.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Back to Top Button -->
