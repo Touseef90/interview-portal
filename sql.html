@@ -132,7 +132,7 @@
           What is sub query or nested query or inner query in SQL?
         </div>
         <div class="answer">
-          It is a query withing another SQL query and embedded within the WHERE
+          It is a query within another SQL query and embedded within the WHERE
           clause.
         </div>
       </div>
@@ -179,6 +179,83 @@
             <li>
               FULL OUTER JOIN - All rows from both tables, pairing them where
               matches exist.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">11.</span>
+          What is a self-join?
+        </div>
+        <div class="answer">
+          A self-join is a join in which a table is joined to itself. It is
+          useful when the data in a table has a relationship with other rows in
+          the same table.<br />
+          Example: Suppose there is an 'Employees' table with the columns
+          'EmployeeID', 'EmployeeName', and 'ManagerID'. The 'ManagerID' column
+          stores the 'EmployeeID' of the employee's manager. If we want to
+          retrieve each employee's name along with their manager's name, we can
+          join the 'Employees' table to itself. This type of join is called a
+          'self-join'.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">12.</span>
+          What are indexes in SQL Server?
+        </div>
+        <div class="answer">
+          SQL indexes are used in relational databases to retrieve data very
+          fast.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">13.</span>
+          What is clustered index?
+        </div>
+        <div class="answer">
+          A clustered index determines the physical order of data rows in a
+          table and stores the actual data directly within the index itself.
+          Because data can only be physically sorted in one way, a table can
+          have only one clustered index. It is like a dictionary.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">14.</span>
+          What is non-clustered index?
+        </div>
+        <div class="answer">
+          A non-clustered index is stored at one place and table data is stored
+          in another place. So the index is not physically stored. It contains
+          the index key values and each key value entry has a pointer to the
+          data row that contains the key value. A table can have multiple
+          non-clustered index. It is like a book index at the start of the page
+          'Table of Contents'.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">15.</span>
+          What is the difference between clustered and non-clustered index?
+        </div>
+        <div class="answer">
+          <ol>
+            <li>
+              A clustered index determines the physical order of data rows and
+              non-clustered index is stored at one place and table data is
+              stored in another place.
+            </li>
+            <li>
+              A table can have only one clustered index but it can have multiple
+              non-clustered index.
             </li>
           </ol>
         </div>
