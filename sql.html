@@ -260,6 +260,206 @@
           </ol>
         </div>
       </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">16.</span>
+          How to create clustered and non-clustered index in a table?
+        </div>
+        <div class="answer">
+          When you create a PRIMARY KEY constraint, a clustered index on the
+          column or columns is automatically created. For creating clustered and
+          non-clustered index explicitly below is the query.<br />
+          <b>
+            CREATE CLUSTERED INDEX "index_name" ON "table_name" ( "column_name"
+            ASC/DESC )
+          </b>
+          <b>
+            CREATE NONCLUSTERED INDEX "index_name" ON "table_name" (
+            "column_name" ASC/DESC )
+          </b>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">17.</span>
+          In which column you will apply the indexing to optimize this query. "
+          SELECT id, class FROM student WHERE name='Touseef' " ?
+        </div>
+        <div class="answer">
+          The column after WHERE condition, which is 'name' here.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">18.</span>
+          What is the difference between Stored Procedure and Function?
+        </div>
+        <div class="answer">
+          <ol>
+            <li>
+              SP may or may not <b>return</b> a value but function must return a
+              value.
+            </li>
+            <li>
+              SP can have input/output parameters but function only has input
+              parameters.
+            </li>
+            <li>
+              We can call function inside SP but cannot call SP inside a
+              function.
+            </li>
+            <li>
+              We cannot use SP in SQL statements like SELECT, INSERT, UPDATE,
+              DELETE, etc. But we can use them with function.
+              <em>SELECT *, dbo.fnCountry(city.long) FROM city.</em>
+            </li>
+            <li>
+              We can use try catch exception handling in SP but we cannot do
+              that in function.
+            </li>
+            <li>
+              We can use transactions in SP but we cannot do that in function.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">19.</span>
+          How to optimize a Stored Procedure or SQL Query?
+        </div>
+        <div class="answer">
+          <ol>
+            <li>Use SET NOCOUNT ON</li>
+            <li>Specify column name instead of using * in SELECT statement.</li>
+            <li>
+              Use schema name before objects or table names. Example: SELECT id,
+              name FROM dbo.Employee
+            </li>
+            <li>
+              Do not use DYNAMIC QUERIES. They are vulnerable to SQL Injections.
+            </li>
+            <li>Use EXISTS() instead of COUNT().</li>
+            <li>Use TRANSACTIONS only when required.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">20.</span>
+          What is a Cursor? Why to avoid them?
+        </div>
+        <div class="answer">
+          A database Cursor is a control which enables traversal/iteration over
+          the rows or records in the table. It occupies lot of memory and not
+          good for performance.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">21.</span>
+          What is the difference between scope_identity and @@identity?
+        </div>
+        <div class="answer">
+          <ol>
+            <li>
+              Both are used to get the last value entered in the identity column
+              of the table.
+            </li>
+            <li>
+              The @@identity returns the last identity created in the same
+              session. The sessoin is DB connection.
+            </li>
+            <li>
+              The scope_identity() function return the last identity created in
+              the same session and the same scope. The scope is the current
+              query or the current SP.
+            </li>
+            <li>
+              Normally we have to use scope_identity() function inside SP.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">22.</span>
+          What is CTE in SQL Server?
+        </div>
+        <div class="answer">
+          A CTE (Common Table Expression), is a temporary
+          <b>named result</b> set, that you can reference within a SELECT,
+          INSERT, UPDATE, or DELETE statement. Think of it as a virtual table
+          that is created on the fly.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">23.</span>
+          What is the difference between DELETE, TRUNCATE, and DROP commands?
+        </div>
+        <div class="answer">
+          The primary difference is that DELETE removes specific or all rows
+          from a table using a filter, TRUNCATE empties a table completely by
+          deallocating its data pages, and DROP completely deletes both the
+          table structure and its data from the database.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">24.</span>
+          How to get the Nth highest salary of an employee?
+        </div>
+        <div class="answer">
+          <ol>
+            <li>
+              The logic is first SELECT TOP N salaries in descending order.
+              <br />
+              SELECT DISTINCT TOP N salary FROM dbo.Employees ORDER BY salary
+              DESC
+            </li>
+            <li>
+              Put the result in 'RESULT' then order by ASC
+              <br />
+              SELECT salary FROM ( SELECT DISTINCT TOP N salary FROM
+              dbo.Employees ORDER BY salary DESC ) RESULT ORDER BY salary
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">25.</span>
+          What are ACID properties?
+        </div>
+        <div class="answer">
+          ACID property are used when you are handling <b>transactions</b> in
+          SQL. That guarantee reliable transaction processing and maintain
+          database data integrity.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">26.</span>
+          What are Magic Tables in SQL Server?
+        </div>
+        <div class="answer">
+          They are temporary, memory-resident virtual tables automatically
+          created and managed by the database engine to hold data modified
+          during Data Manipulation Language (DML) operations.
+        </div>
+      </div>
     </div>
 
     <!-- Back to Top Button -->
