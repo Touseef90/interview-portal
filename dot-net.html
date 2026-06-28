@@ -42,6 +42,268 @@
           platform developed and maintained by Microsoft.
         </div>
       </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">2.</span>
+          What are the advantages of .NET Core over .NET Framework?
+        </div>
+        <div class="answer">
+          .NET Core provides a faster, lightweight, and cross-platform
+          alternative to the Windows-only .NET Framework. Its main advantages
+          include the ability to run applications on Linux and macOS,
+          significantly faster processing speeds, a modular architecture, and
+          native support for modern containerized cloud deployments.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">3.</span>
+          Explain default project structure in ASP .NET Core application?
+        </div>
+        <div class="answer">
+          <h3>Root Files and Entry Points</h3>
+          <ul>
+            <li>
+              Program.cs: The absolute entry point and brain of your
+              application. It initializes the web server, registers services
+              into the dependency injection container, and configures the HTTP
+              request middleware pipeline.
+            </li>
+            <li>
+              ProjectName.csproj: The MSBuild XML file containing project
+              configurations, target framework versions, and explicit NuGet
+              package dependencies.
+            </li>
+            <li>
+              appsettings.json: The central configuration file where you store
+              environment-specific variables like database connection strings,
+              logging thresholds, and API keys.
+            </li>
+          </ul>
+          <h3>Core Folders</h3>
+          <ul>
+            <li>
+              wwwroot: The dedicated web root folder for all public static
+              assets. Any CSS stylesheets, JavaScript files, icons, or images
+              served directly to the browser live here.
+            </li>
+            <li>
+              Properties: Houses the launchSettings.json file. This file
+              dictates local development profiles, including the application
+              URL, target port configurations, and runtime environment settings.
+            </li>
+            <li>
+              Dependencies: Visual Studio node displaying all imported
+              frameworks, SDK references, and NuGet packages your project needs
+              to build.
+            </li>
+          </ul>
+          <h3>Model-View-Controller (MVC) Specific Folders</h3>
+          <p>If your app is built using the MVC template.</p>
+          <ul>
+            <li>
+              Controllers: Contains C# classes that receive HTTP requests,
+              interact with your business logic, and hand data over to your user
+              interface.
+            </li>
+            <li>
+              Models: Holds the data structures, plain C# objects (POCOs).
+            </li>
+            <li>
+              Views: Contains Razor (.cshtml) front-end templates that mix HTML
+              markup with C# syntax to render data dynamically to clients.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">4.</span>
+          What is the role of configureservices and configure method?
+        </div>
+        <div class="answer">
+          In ASP.NET Core, <b>ConfigureServices</b> registers application
+          dependencies into the Dependency Injection (DI) container. It is
+          optional. It gets called by the host before <b>Configure</b> method,
+          while <b>Configure</b> sets up the HTTP request and response pipeline.
+          It is used to add middleware components. These two methods dictate how
+          an application prepares its internal logic and how it handles web
+          requests.<br />
+          While historically located inside the <b>Startup.cs</b> class, modern
+          .NET applications (using Minimal APIs) execute these exact same
+          responsibilities sequentially using <b>builder.Services</b> and
+          <b>app</b> inside the <b>Program.cs</b> file.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">5.</span>
+          What is dependency injection in ASP .NET Core? Or how can we inject
+          the service dependency into the controller?
+        </div>
+        <div class="answer">
+          <b>Dependency Injection (DI)</b> used to achieve loose coupling
+          between classes and their dependencies. Instead of a class directly
+          instantiating its required dependencies (using the
+          <b>new</b> keyword), the ASP.NET Core built-in Inversion of Control
+          (IoC) container automatically creates and provides those instances at
+          runtime.<br />
+          To inject a service dependency into a controller, you must follow a
+          three-step process: define the service contract, register the service
+          inside the framework's container, and demand the dependency inside
+          your controller.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">6.</span>
+          Describe service lifetime in ASP.NET Core. What is the difference
+          between add singleton, add transient and add scoped?
+        </div>
+        <div class="answer">
+          Service lifetime dictates how long a Dependency Injection (DI)
+          instance lives in memory. There are three types:
+          <h3>Transient</h3>
+          <ul>
+            <li>
+              <b>What it is:</b> A
+              <b>new instance is created every single time</b> it is requested.
+            </li>
+            <li>
+              <b>When to use:</b> Lightweight, stateless services (e.g., utility
+              classes, math helpers).
+            </li>
+          </ul>
+          <h3>Scoped</h3>
+          <ul>
+            <li>
+              <b>What it is:</b> A
+              <b>new instance is created once per HTTP request</b>. It is reused
+              for all calls within that specific request, then destroyed when
+              the request ends.
+            </li>
+            <li>
+              <b>When to use:</b> Services tied to a single user/request (e.g.,
+              Entity Framework `DbContext`, Unit of Work).
+            </li>
+          </ul>
+          <h3>Singleton</h3>
+          <ul>
+            <li>
+              <b>What it is:</b> A
+              <b>single instance is created once per application lifetime</b>.
+              It is shared across all users and all requests until the app shuts
+              down.
+            </li>
+            <li>
+              <b>When to use:</b> Heavy-to-create, shared resources (e.g.,
+              Memory Cache, Configuration).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">7.</span>
+          What is middleware?
+        </div>
+        <div class="answer">
+          A middleware is a component (class) that is executed on every request.
+          When a request comes in, it passes through each middleware component
+          one by one.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">8.</span>
+          What is Kestrel? What is in process and out of process hosting?
+        </div>
+        <div class="answer">
+          Kestrel is the default, cross-platform web server for ASP.NET Core
+          applications. It is lightweight, high-performance, and designed to
+          process web requests directly without needing to be bundled with a
+          specific operating system.<br />
+          <h3>In-Process Hosting</h3>
+          <ul>
+            <li>
+              How it works: IIS acts as the native HTTP server, routing requests
+              directly to the managed code without needing Kestrel.
+            </li>
+            <li>
+              Pros: Maximum performance and lower latency because it eliminates
+              the overhead of proxying requests between two servers.
+            </li>
+            <li>
+              Cons: Windows-only (if relying on IIS), and if the application
+              crashes, the entire IIS worker process goes down
+            </li>
+          </ul>
+          <h3>Out-of-Process Hosting</h3>
+          <ul>
+            <li>
+              How it works: An external web server (like IIS, Nginx, or Apache)
+              acts as a reverse proxy. It listens for incoming traffic and
+              forwards it to the Kestrel process where the app is executing.
+            </li>
+            <li>
+              Pros: Superior isolation and stability—if your ASP.NET Core app
+              crashes, the main reverse proxy stays up. It is also fully
+              cross-platform (works on Linux/macOS).
+            </li>
+            <li>
+              Cons: Slightly slower due to the overhead of proxying requests.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">9.</span>
+          What is difference between Kestrel and IIS?
+        </div>
+        <div class="answer">
+          Kestrel is a lightweight, cross-platform, open-source web server
+          designed specifically to run ASP.NET Core applications. In contrast,
+          IIS (Internet Information Services) is a full-featured,
+          enterprise-grade, closed-source web server developed by Microsoft that
+          runs exclusively on Windows.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+          <span class="question-number">10.</span>
+          What is Request Delegate? What are Run, Use, and Map methods?
+        </div>
+        <div class="answer">
+          Request Delegate handles each HTTP request and are used to build
+          request pipeline by using the Run, Use, and Map extension methods.
+          <ul>
+            <li>
+              The Use method is used to add middleware components to the
+              pipeline. It is designed to run code both before and after the
+              next middleware component.
+            </li>
+            <li>
+              The Run method adds a terminal middleware delegate to the
+              application pipeline. It is always placed at the end of a specific
+              pipeline chain.
+            </li>
+            <li>
+              The Map method is used to branch the middleware pipeline
+              conditionally based on the URL path matching a specific segment.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Back to Top Button -->
